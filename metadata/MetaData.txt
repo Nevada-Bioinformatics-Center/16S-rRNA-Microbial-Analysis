@@ -1,0 +1,97 @@
+SampleID	Sex	Age	Weight	Height	Exercise	Num_dogs	Num_cats	FullTime_job	PartTime_job	EduLev_self	EduLev_parents	FullTime_student	PartTime_student	SingleRace	Hispanic	White	Latino	Black_African	East_Asian	Middle_Eastern	Southeast_Asian	Pacific_Islander	Native_American	Antibiotic_reg	Antibiotic_6months	Antibiotic_3months	Antibiotic_1months	Alcohol	Cannabis	num_animals	BMI	BMI_ordinal
+WP_J06MK	Male	34	241	69	1	1	2	1	0	PhD	BA/BS	0	0	0	1	1	1	0	0	0	0	0	0	0	0	0	0	1	1	3	35.5855912623398	Obese
+WP_SUFNU	Female	36	120	52	1	2	0	1	0	PhD	PhD	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0	2	31.198224852071	Obese
+WP_1VMLX	Male	21	130	65	1	0	0	0	1	High School	BA/BS	1	0	1	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	21.6307692307692	Healthy weight
+WP_J0B3X	Male	27	175	72	1	1	0	1	0	Masters	Masters	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	1	1	23.731674382716	Healthy weight
+WP_RAJES	Female	57	140	61	1	1	0	0	0	Masters	High School	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0	1	26.4498790647675	Overweight
+WP_G9EBL	Male	56	150	68	1	1	0	0	0	Masters	Masters	0	0	1	0	1	0	0	0	0	0	0	0	0	1	0	0	1	0	1	22.8049307958477	Healthy weight
+WP_4EJJT	Female	63	187	67	1	2	0	0	0	Masters	BA/BS	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	2	29.2851414568946	Overweight
+WP_TDY7G	Female	38	130	65.5	1	0	2	1	0	BA/BS	PhD	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	2	21.3017889400385	Healthy weight
+WP_8V6E3	Male	66	210	71	1	0	0	1	0	Masters	High School	0	1	1	1	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	29.2858559809562	Overweight
+WP_HDKZL	Female	28	180	69	1	0	1	1	0	BA/BS	BA/BS	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	1	26.578449905482	Overweight
+WP_MRCZG	Male	50	168	59	1	0	2	1	0	BA/BS	BA/BS	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0	2	33.9281815570238	Obese
+WP_6RCV3	Male	50	170	64	1	1	0	1	0	PhD	High School	0	0	0	1	1	1	0	0	0	0	0	0	0	1	0	0	0	0	1	29.17724609375	Overweight
+WP_KXGT6	Female	45	140	62	0	1	0	0	0	High School	Associates	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	1	1	25.6035379812695	Overweight
+WP_RPV50	Female	41	155	69	1	0	0	0	0	BA/BS	Associates	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	22.8869985297206	Healthy weight
+WP_YY8WG	Female	27	130	62	1	0	0	0	1	BA/BS	Masters	0	0	1	0	1	0	0	0	0	0	0	0	0	1	0	0	1	0	0	23.7747138397503	Healthy weight
+WP_EC5AP	Female	59	112	63	1	2	0	0	0	Masters	High School	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	2	19.8377425044092	Healthy weight
+WP_1J0A0	Female	55	130	67.5	1	0	0	0	0	BA/BS	BA/BS	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0	0	20.0581618655693	Healthy weight
+WP_UIXW3	Female	39	150	65	1	2	2	1	0	Associates	Masters	0	1	1	0	1	0	0	0	0	0	0	1	0	0	0	0	1	0	4	24.9585798816568	Healthy weight
+WP_7FAEC	Female	22	140	67	1	1	0	0	1	High School	BA/BS	1	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	1	21.9247048340388	Healthy weight
+WP_YF6XT	Female	20	150	64	1	0	0	0	0	Associates	Masters	1	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	1	1	0	25.74462890625	Overweight
+WP_3GH4E	Male	19	155	72	1	0	0	0	0	High School	PhD	1	0	0	1	1	1	0	0	0	0	0	0	0	0	0	0	1	1	0	21.0194830246914	Healthy weight
+WP_HFP3K	Male	20	195	74	1	1	1	0	0	High School	BA/BS	1	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	2	25.0337837837838	Overweight
+WP_KM8BK	Male	37	209	73	0	2	0	1	0	High School	BA/BS	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	1	1	2	27.5712141114656	Overweight
+WP_8SXNH	Male	38	225	71	1	3	0	1	0	Associates	High School	0	0	1	1	0	1	0	0	0	0	0	0	0	0	0	0	1	0	3	31.3777028367387	Obese
+WP_X576L	Male	36	198	69	1	3	0	0	0	Masters	BA/BS	0	0	1	0	1	0	0	0	0	0	0	0	0	1	1	1	1	0	3	29.2362948960302	Overweight
+WP_4O0YR	Male	21	147	69	1	0	0	0	0	High School	BA/BS	1	0	1	0	1	0	0	0	0	0	0	0	1	1	1	1	1	1	0	21.705734089477	Healthy weight
+WP_Z01LM	Male	22	150	75	1	0	0	0	1	High School	Masters	1	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	1	1	0	18.7466666666667	Healthy weight
+WP_1N9BJ	Female	23	120	61	1	2	0	0	1	BA/BS	BA/BS	0	0	0	0	1	0	0	0	0	1	0	0	0	1	1	0	1	0	2	22.6713249126579	Healthy weight
+WP_QIGEC	Male	25	150	68	0	0	0	1	0	High School	Associates	0	0	0	0	1	0	0	1	0	0	1	0	0	0	0	0	0	0	0	22.8049307958477	Healthy weight
+WP_9ZJJI	Female	23	165	68	1	0	0	0	1	BA/BS	BA/BS	1	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	25.0854238754325	Overweight
+WP_4SP0U	Female	27	123	65.5	1	0	0	1	0	BA/BS	Masters	1	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0	0	20.1547695355749	Healthy weight
+WP_95020	Female	26	170	71	1	0	0	1	1	Masters	Masters	1	0	0	0	1	1	0	0	0	0	0	0	0	0	0	0	1	1	0	23.7075976988693	Healthy weight
+WP_0MAY3	Female	21	240	71	1	1	0	1	1	High School	Masters	1	0	0	1	1	1	0	1	0	0	0	1	0	0	0	0	0	1	1	33.4695496925213	Obese
+WP_JGXYL	Female	20	107	60	1	1	0	0	0	High School	High School	1	0	0	1	1	1	0	0	0	0	0	0	0	0	0	0	0	0	1	20.8947222222222	Healthy weight
+WP_ATJLX	Female	29	145	67	1	1	0	0	0	BA/BS	Masters	0	1	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	1	22.707730006683	Healthy weight
+WP_1641C	Male	36	185	72	1	0	1	1	0	Associates	High School	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0	1	25.0877700617284	Overweight
+WP_YRYYF	Male	20	143	67	1	0	0	0	1	High School	High School	1	0	0	0	1	0	0	0	0	1	0	0	0	0	0	0	0	0	0	22.3945199376253	Healthy weight
+WP_DFG11	Male	22	180	73	1	2	1	0	1	High School	Masters	1	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0	3	23.7455432538938	Healthy weight
+WP_XDI0I	Female	25	130	62	1	1	1	0	0	Associates	High School	1	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	1	2	23.7747138397503	Healthy weight
+WP_11O29	Female	19	116	61	0	0	0	0	1	High School	High School	1	0	1	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	21.915614082236	Healthy weight
+WP_X803O	Female	37	170	71	1	0	1	1	0	PhD	Associates	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0	1	23.7075976988693	Healthy weight
+WP_G375R	Male	22	160	69.5	1	0	0	0	1	Associates	High School	1	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0	0	23.2865793695978	Healthy weight
+WP_2FIH2	Female	23	155	67.5	0	1	0	0	0	BA/BS	Masters	1	0	1	0	1	0	0	0	0	0	0	1	0	0	0	0	0	0	1	23.9155006858711	Healthy weight
+WP_LNAVI	Male	26	235	73	1	2	0	1	0	Masters	Masters	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0	2	31.0011259148058	Obese
+WP_S9205	Female	67	167	65	1	2	0	0	0	BA/BS	Associates	0	0	1	0	1	0	0	0	0	0	0	1	0	0	0	0	1	0	2	27.7872189349112	Overweight
+WP_TABVB	Female	65	113	61	1	1	0	0	0	Associates	High School	0	0	0	0	1	0	0	1	0	0	0	0	0	0	0	0	1	1	1	21.3488309594195	Healthy weight
+WP_MN6W8	Female	23	209	62	1	0	0	0	0	High School	BA/BS	1	0	1	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	38.2224245577523	Obese
+WP_PWNX6	Female	62	137	64	1	0	0	1	0	Masters	BA/BS	0	0	1	0	1	0	0	0	0	0	0	0	0	1	1	0	0	0	0	23.513427734375	Healthy weight
+WP_4ZGPR	Female	44	190	71	1	1	0	1	1	BA/BS	BA/BS	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0	1	26.4967268399127	Overweight
+WP_DB09W	Male	62	155	68	1	0	1	1	1	High School	High School	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0	1	23.5650951557093	Healthy weight
+WP_3S8DO	Male	43	170	67	0	0	0	1	0	BA/BS	BA/BS	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	26.6228558699042	Overweight
+WP_00NL6	Female	45	261	71	1	0	0	1	0	BA/BS	Associates	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	36.3981352906169	Obese
+WP_6QWL6	Female	45	150	62	1	1	1	1	0	MD or JD	MD or JD	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0	2	27.4323621227888	Overweight
+WP_N9ZYL	Male	59	194	70	1	0	0	1	0	High School	High School	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	27.8330612244898	Overweight
+WP_RPXHF	Female	40	130	66	1	0	0	1	0	Masters	Associates	0	0	1	0	1	0	0	0	0	0	0	0	0	1	1	1	0	1	0	20.9802571166208	Healthy weight
+WP_GGC27	Female	55	222	67	1	3	0	0	0	Masters	BA/BS	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	3	34.7663176654043	Obese
+WP_UXM5R	Female	70	200	62	1	0	2	0	0	High School	High School	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	2	36.576482830385	Obese
+WP_4X176	Male	66	140	70	1	0	0	1	0	BA/BS	High School	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	NA	0	0	20.0857142857143	Healthy weight
+WP_1P38C	Female	55	192	68	1	0	0	0	0	High School	High School	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	29.1903114186851	Overweight
+WP_EV750	Female	67	213	69	1	2	1	0	1	BA/BS	BA/BS	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0	3	31.4511657214871	Obese
+WP_U4XI6	Female	55	192.3	65	1	1	0	0	0	High School	High School	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0	1	31.996899408284	Obese
+WP_D3P76	Male	63	191	71	1	0	0	1	0	BA/BS	Masters	0	0	0	0	1	0	0	0	1	0	0	0	0	0	0	0	0	0	0	26.6361832969649	Overweight
+WP_E4JSW	Female	53	97	61	1	0	0	1	1	BA/BS	Masters	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	18.3259876377318	Underweight
+WP_LYD4P	Male	45	180	67	1	0	0	0	0	PhD	BA/BS	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	0	1	0	0	28.1889062151927	Overweight
+WP_74EXV	Female	24	140	65	0	0	0	0	0	BA/BS	Masters	1	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	23.294674556213	Healthy weight
+WP_C63U0	Female	39	112	63	1	0	0	0	1	Masters	PhD	0	0	1	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	19.8377425044092	Healthy weight
+WP_L990V	Female	43	145	64	1	0	0	1	0	Masters	Associates	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0	0	24.886474609375	Healthy weight
+WP_U25P1	Female	21	150	67	1	2	1	0	1	Associates	BA/BS	1	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0	3	23.4907551793272	Healthy weight
+WP_3XS8V	Female	25	130	70	1	0	0	1	0	BA/BS	BA/BS	0	0	1	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	18.6510204081633	Healthy weight
+WP_HXR5G	Female	39	180	69	0	0	0	1	0	Masters	BA/BS	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	26.578449905482	Overweight
+WP_7QZ15	Male	55	140	69	1	0	0	0	0	BA/BS	PhD	0	0	1	0	1	0	0	0	0	0	0	0	0	1	0	0	1	0	0	20.6721277042638	Healthy weight
+WP_7XKRF	Female	60	136	68	1	0	0	0	0	Masters	Masters	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	20.6764705882353	Healthy weight
+WP_OGHOR	Female	54	139	67	1	2	1	1	1	BA/BS	BA/BS	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	3	21.7680997995099	Healthy weight
+WP_HRXYD	Female	53	113	65.5	1	0	1	1	0	BA/BS	High School	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	1	1	18.5161703863411	Healthy weight
+WP_1IA7W	Male	48	160	74	1	1	0	1	1	MD or JD	BA/BS	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	1	20.5405405405405	Healthy weight
+WP_PKUXW	Female	74	133	62	1	1	0	0	0	Masters	MD or JD	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0	1	24.323361082206	Healthy weight
+WP_PAO7S	Female	61	157	67	0	1	3	1	0	BA/BS	PhD	0	0	1	0	1	0	0	0	0	0	0	0	0	1	1	1	1	1	4	24.5869904210292	Healthy weight
+WP_CD85T	Female	67	147	63	1	3	1	0	0	BA/BS	Associates	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	4	26.037037037037	Overweight
+WP_KA3NM	Female	39	130	64	1	0	2	1	0	Masters	BA/BS	0	0	1	1	1	0	0	0	0	0	0	0	0	0	0	0	0	0	2	22.31201171875	Healthy weight
+WP_6XTQO	Female	44	140	67	1	0	0	1	0	PhD	PhD	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	21.9247048340388	Healthy weight
+WP_HXAED	Male	46	210	64	1	1	0	1	0	High School	High School	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0	1	36.04248046875	Obese
+WP_UBNEB	Female	60	128	65	1	0	0	0	0	BA/BS	Associates	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	21.2979881656805	Healthy weight
+WP_1H9IQ	Male	41	145	72	1	0	0	1	0	Masters	Masters	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	19.663387345679	Healthy weight
+WP_OXWHK	Male	39	200	76	0	1	0	1	0	PhD	Masters	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0	1	24.3421052631579	Healthy weight
+WP_W6T8C	Male	19	105	66	1	0	0	0	1	High School	BA/BS	1	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0	0	16.9455922865014	Underweight
+WP_LHSQX	Female	85	173	67	1	1	0	0	0	Associates	High School	0	0	1	0	1	0	0	0	0	0	0	0	0	1	1	0	0	0	1	27.0926709734908	Overweight
+WP_CRVC0	Female	42	195	68	1	1	0	1	1	PhD	Masters	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	1	29.6464100346021	Overweight
+WP_2IHHX	Female	38	136	60	1	0	0	0	0	High School	High School	0	1	0	1	0	1	0	0	0	1	0	1	0	0	0	0	0	1	0	26.5577777777778	Overweight
+WP_09PJH	Female	39	145	66	1	1	0	1	0	Masters	Masters	0	0	1	NA	1	0	0	0	0	0	0	1	0	0	0	0	1	0	1	23.4010560146924	Healthy weight
+WP_ZZK83	Female	48	143	66	1	2	1	0	0	BA/BS	Masters	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0	3	23.0782828282828	Healthy weight
+WP_5VPD7	Male	49	180	72	1	2	1	1	0	NA	High School	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	1	0	3	24.4097222222222	Healthy weight
+WP_UE657	Female	52	268	68	0	2	1	1	0	Masters	High School	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	3	40.7448096885813	Obese
+WP_A03Y5	Male	42	175	72	1	0	0	1	0	BA/BS	BA/BS	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	23.731674382716	Healthy weight
+WP_K0EKE	Female	34	135	66	1	0	0	0	0	Masters	BA/BS	0	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	21.7871900826446	Healthy weight
+WP_S1T2Q	Female	37	141	62	0	0	0	1	0	BA/BS	Masters	1	0	1	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	25.7864203954214	Overweight
+WP_US0EW	Male	44	180	68	1	1	0	1	0	BA/BS	High School	0	0	1	1	0	1	0	0	0	0	0	0	0	0	0	0	0	0	1	27.3659169550173	Overweight
