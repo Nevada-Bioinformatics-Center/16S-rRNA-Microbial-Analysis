@@ -1,19 +1,18 @@
 ---
 title: "Submodule01"
 author: "Nevada Bioinformatics Center"
-date: "`r Sys.Date()`"
+date: "2025-05-13"
 output:
-  html_document
+  html_document:
+      keep_md: true
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+
 
 # Submodule 01: Introduction to 16S rRNA Sequencing and Microbial Community Analysis
 
 <center>
-    <img src="images/workflow.png" alt="workflow" width="1000"/>
+    <img src="../images/workflow.png" alt="workflow" width="1000"/>
 </center>
 
 ## Overview
@@ -25,7 +24,7 @@ This module introduces participants to the principles of 16S rRNA sequencing and
 
 # Background 
 <center>
-    <img src="images/microbiome.jpg" alt="micro"/>
+    <img src="../images/microbiome.jpg" alt="micro"/>
 </center>
 <!-- image refernce: https://www.genome.gov/about-nhgri/Director/genomics-landscape/june-6-2019-Human-Microbiome_Project-->
 
@@ -33,7 +32,7 @@ This module introduces participants to the principles of 16S rRNA sequencing and
 We will be analyzing microbiota community composition using 16s sequencing. 16S is the ribosomal RNA (rRNA) found in prokaryotes, distinct from eukaryotic ribosomal RNA, thus an efficient filter for prokaryotes from our samples<sup>2</sup>. The 16S gene, found in the small subunit of the prokaryotic ribosomes, has many highly conserved areas across species<sup>3</sup>, enabling the creation of primers that bind and amplify almost all bacterial species<sup>1</sup>. Additionally, this gene has areas of highly variable sequences, allowing us to differentiate which species we have. 16S rRNA analysis determines the diversity and relative abundance of microbes in a sample. We can then associate differences in diet and lifestyle with microbiome community structure.
 
 <center>
-    <img src="images/16S.png" alt="16S" width="600"/>
+    <img src="../images/16S.png" alt="16S" width="600"/>
 </center>
 
 <!-- image refernce: https://microbenotes.com/16s-rrna-gene-sequencing/-->
@@ -59,7 +58,7 @@ Microorganisms can impact their environment (or the host) in various ways. When 
 These microbes play essential roles in digestion, nutrient absorption, immune system function, and even mental health<sup>10,12</sup>. An imbalance in the composition and function of the gut microbiome, known as dysbiosis, has been linked to a range of health conditions, including inflammatory bowel disease<sup>13</sup>, obesity<sup>14</sup>, diabetes<sup>15</sup>, and even mental health disorders like depression<sup>16</sup>.
 
 <center>
-    <img src="images/Microbiome_SF.png" alt="microbiome_details" width="600"/>
+    <img src="../images/Microbiome_SF.png" alt="microbiome_details" width="600"/>
 </center>
 <!-- image refernce: Freese lab slides-->
 
@@ -85,7 +84,7 @@ The 16S rRNA gene sequencing process involves:
 
 
 <center>
-    <img src="images/seq_steps.png" alt="sequencing steps" width="500"/>
+    <img src="../images/seq_steps.png" alt="sequencing steps" width="500"/>
 </center>
 <!-- image refernce:https://microbenotes.com/amplicon-sequencing/-->
 
@@ -128,7 +127,7 @@ In practice, researchers often examine multiple levels to get a comprehensive pi
 
 
 <center>
-    <img src="images/taxonomy.png" alt="taxonomy" width="500"/>
+    <img src="../images/taxonomy.png" alt="taxonomy" width="500"/>
 </center>
 <!-- image refernce:https://www.mometrix.com/academy/biological-classification-systems/-->
 
@@ -149,7 +148,7 @@ The outcome of taxonomic classification and microbial community profiling provid
 
 ## 6. Study Design and Hypothesis Development
 <center>
-    <img src="images/wolfpack.png" alt="wolfpack" width="200"/>
+    <img src="../images/wolfpack.png" alt="wolfpack" width="200"/>
 </center>
 
 In this training module, we will be analyzing gut microbiome data from a University of Nevada, Reno study. The **WOLFPACK Study** (Wide Open Local Fecal sample collection comparing Pharmaceutical intake, ACtivity, and dietary intaKe) is designed to explore how diet, health, and many lifestyle aspects impact the gut microbiome of adults living in Northern Nevada. By examining the bacterial composition of fecal samples using 16S rRNA sequencing, and linking these findings to lifestyle and dietary information collected through surveys, this study aims to provide insights into how daily habits and health status influence gut ecology.
@@ -183,13 +182,7 @@ Predetermined hypotheses guide the research workflow and create well-defined res
 ### Sample Population
 This study's sample population is **adult residents of Northern Nevada** who are interested in participating. To ensure a broad representation, participation is open to adults of various ages, genders, ethnic backgrounds, and health statuses. The study's open enrollment and anonymous data collection aim to make participation accessible and encourage a wide range of community members to join. By focusing on the Northern Nevada population, the study can provide insights into region-specific factors that may influence gut health, allowing for comparisons with other populations in future research.
 
-## Quiz
 
-```{r}
-# Run the following command to take the quiz
-library(htmltools)
-includeHTML("questions/Quiz_Submodule1.html")
-```
 
 
 ## Conclusion
