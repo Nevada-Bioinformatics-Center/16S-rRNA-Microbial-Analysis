@@ -1,2 +1,8 @@
 .DS_Store
 datach/.Rhistory
+.Rproj.user
+datach/
+.Rhistory
+.Rproj
+*.rds
+tax/
