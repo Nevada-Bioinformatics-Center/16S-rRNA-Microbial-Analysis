@@ -1,14 +1,3 @@
----
-title: "Submodule03"
-author: "Nevada Bioinformatics Center"
-date: "2025-05-13"
-output: 
-  html_document:
-    keep_md: true
----
-
-
-
 # Submodule 3: Taxonomic Classification and Diversity Analysis
 
 ## Overview

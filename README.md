@@ -8,10 +8,8 @@
   - [**Contents**](#contents)
   - [**Overview**](#overview)
   - [**Background**](#background)
-  - [**Before Starting**](#before-starting)
   - [**Getting Started**](#getting-started)
   - [**Software Requirements**](#software-requirements)
-  - [**Architecture Design**](#architecture-design)
   - [**Data**](#data)
   - [**Funding**](#funding)
   - [**License for Data**](#license-for-data)
@@ -22,9 +20,9 @@ This cloud-based learning module introduces the principles of 16S rRNA sequencin
 
 The overall structure of the module is explained below:
 
-- [Submodule 01](Submodule01.ipynb) aims to provide an understanding of the principles of 16S rRNA sequencing and its applications in microbial community profiling.
-- [Submodule 02](Submodule02.ipynb) teaches how to preprocess raw 16S rRNA sequencing data and perform quality control checks to ensure reliable results.
-- [Submodule 03](Submodule03.ipynb) covers taxonomic classification of 16S rRNA sequences, evaluating rarefaction curves, and analyzing alpha and beta diversity in microbial communities.
+- [Submodule 01](Markdown/Submodule01.md) aims to provide an understanding of the principles of 16S rRNA sequencing and its applications in microbial community profiling.
+- [Submodule 02](Markdown/Submodule02.md) teaches how to preprocess raw 16S rRNA sequencing data and perform quality control checks to ensure reliable results.
+- [Submodule 03](Markdown/Submodule03.md) covers taxonomic classification of 16S rRNA sequences, evaluating rarefaction curves, and analyzing alpha and beta diversity in microbial communities.
 
 ## **Background**
 
@@ -36,49 +34,22 @@ The process involves amplifying the gene from environmental DNA samples, followe
 
 The objective of this module is to enhance understanding of 16S rRNA sequencing principles by analyzing microbial community composition and diversity. This involves bioinformatics, including quality control, sequence processing, taxonomic assignment, and diversity analysis.
 
-## **Before Starting**
-
-This learning module was designed to be executed on Amazon Web Services (AWS) cloud platform, with the aim of requiring nothing but the files within this GitHub repository. Please, follow the steps highlighed **here** to create a new user account in AWS, open AWS Sagemaker Studio and launch JupyterLab.
 
 ## **Getting Started**
 
- Each learning sub-modules is organized in Jupyter notebooks with step-by-step hands-on practice. This module uses the coding languge R to install necessary tools, obtain data, perform analyses, and visualize the results.
+ Each learning sub-modules is organized in RMarkdown files with step-by-step hands-on practice. This module uses the coding languge R to install necessary tools, obtain data, perform analyses, and visualize the results.
 
-- Step 1: Open the Terminal to clone the GitHub repository with the modules and the data. Use the Git command:
+- Step 1: Downlaod [R](https://www.r-project.org/) and [RStudio](https://posit.co/download/rstudio-desktop/) on your computer. 
+
+
+- Step 2: Clone the GitHub repository. 
+
+  - Either use a Graphical User Interface (GUI) like [GitHub Desktop](https://desktop.github.com/download/).
+  - Or use following the Git command in your Terminal:
 
 ```
-git clone https://github.com/Nevada-Bioinformatics-Center/NIGMS-UNR-2024_CloudModule
+git clone https://github.com/Nevada-Bioinformatics-Center/16S-rRNA-Microbial-Analysis.git
 ```
-
-<p align="center">
- <img width= "1280" height= "720" src="images/step11.png">
-</p>
-
-- Step 2: After running the command, a new folder will be visible in the left pane labeled "NIGMS-UNR-202..". Select it.
-
-<p align="center">
- <img width= "1280" height= "720" src="images/step12.png">
-</p>
-
-- Step 3: Select `Submodule01.ipynb` file in the left pane to open it in the center pane.
-
-<p align="center">
- <img width= "1280" height= "720" src="images/step13.png">
-</p>
-
-- Step 4: Once done with `Submodule01.ipynb`, proceed by closing it in the center pane, then opening `Submodule02.ipynb`. Likewise, perform the same operation when proceeding to `Submodule03.ipynb`
-
-- Step 5: When reading through the tutorial, users will encounter code blocks that can be executed in JupyterLab by either clicking on the cell and pressing `Shift + Enter` or by pressing the `Play` button in the top toolbar.
-
-<p align="center">
- <img width= "1280" height= "720" src="images/step14.png">
-</p>
-
-- Step 6: When finished with the tutorial, please shutdown the cloud resources. Select `File` in the top bar then `Shutdown`.
-
-<p align="center">
- <img width= "1280" height= "720" src="images/step15.png">
-</p>
 
 ## **Software Requirements**
 
@@ -86,7 +57,7 @@ The following software are required to run this cloud module.
 
 R Version:
 ```
-R version 4.4.1 (2024-06-14)
+R version 4.5.0
 ```
 
 Required R Packages:
@@ -107,8 +78,6 @@ Required R Packages:
 - stringr (version 1.5.1)
 
 **Note:** The above listed R packages and the R environment has already been created via a Docker container image `054037098114.dkr.ecr.us-east-1.amazonaws.com/sagemaker/r-notebook` and is deployed via AWS SageMaker when running this cloud module.
-
-## **Architecture Design**
 
 
 ## **Data**

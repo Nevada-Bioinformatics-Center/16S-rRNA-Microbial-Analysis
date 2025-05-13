@@ -1,14 +1,3 @@
----
-title: "Submodule02"
-author: "Nevada Bioinformatics Center"
-date: "2025-05-13"
-output: 
-  html_document:
-    keep_md: true
----
-
-
-
 # Submodule 2: Data Preprocessing and Quality Control
 
 
