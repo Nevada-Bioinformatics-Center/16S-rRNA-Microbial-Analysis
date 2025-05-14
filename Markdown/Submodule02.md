@@ -99,12 +99,13 @@ Now we will download our data and import it with DADA2.
 
 ``` r
 # Download data
+system("wget -r -np -R 'index.html*' --no-check-certificate --cut-dirs=2 -nH https://biox.unr.edu/ftp/16S_Training_Module/")
 ```
 
 
 ``` r
 # Check files
-path <- "datach/fastquz/newFastq"
+path <- "fastqs"
 list.files(path)
 ```
 

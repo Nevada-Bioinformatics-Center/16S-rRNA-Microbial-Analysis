@@ -38,6 +38,8 @@ We will be analyzing microbiota community composition using 16s sequencing. 16S 
 
 <!-- image refernce: https://microbenotes.com/16s-rrna-gene-sequencing/-->
 
+$~$
+
 The 16S rRNA gene is widespread, has a relatively slow mutation rate in conserved regions, and high variability in other parts of the sequence, which makes it suitable for taxonomic identification. Researchers can sequence the 16S rRNA gene from mixed microbial samples, such as those from soil<sup>4</sup>, water<sup>5</sup>, or different areas of humans, such as the skin, oral cavity, vagina, or the gut<sup>6</sup>, to identify and quantify the microbes present without the need to culture them in a lab. This gene provides a snapshot of the microbial diversity within a sample, enabling researchers to explore how microbial communities influence human health, environmental processes, and other biological systems. This method has been widely used to investigate the gut microbiome’s relationship with dietary patterns, lifestyle, and various diseases.
 
 ## 2. Gut Microbiome
@@ -47,6 +49,7 @@ The gut microbiome refers to the dynamic ecosystem of microorganisms living in t
 ### Microbiota: The "Who" in the microbiome.
 
 The microbiota refers to the community of microorganisms making up the microbiome. This includes:
+
  - *Bacteria*
  - *Archaea*
  - *Fungi*
@@ -58,6 +61,8 @@ The microbiota refers to the community of microorganisms making up the microbiom
 Microorganisms can impact their environment (or the host) in various ways. When considering the complexity of the microbiome, it’s important to remember that the microbiome refers to more than the collection of all the microorganisms that are present (microbiota). The gut microbiome refers to the microbiota and all the properties of the gut ecosystem, such as the pH, redox potential, and metabolites within the ecosystem. The additional properties are referred to as the "theater of activity", through which the microbiome interacts dynamically within itself and with the environment (in this case--you).
 These microbes play essential roles in digestion, nutrient absorption, immune system function, and even mental health<sup>10,12</sup>. An imbalance in the composition and function of the gut microbiome, known as dysbiosis, has been linked to a range of health conditions, including inflammatory bowel disease<sup>13</sup>, obesity<sup>14</sup>, diabetes<sup>15</sup>, and even mental health disorders like depression<sup>16</sup>.
 
+$~$
+
 <center>
     <img src="images/Microbiome_SF.png" alt="microbiome_details" width="600"/>
 </center>
@@ -66,6 +71,8 @@ These microbes play essential roles in digestion, nutrient absorption, immune sy
 ## 3. Sequencing Technologies for 16S rRNA
 
 Several sequencing technologies are available for studying microbial communities, the most commonly used platforms include **Illumina, PacBio, and Oxford Nanopore Technologies.** These platforms offer high-throughput capabilities that allow researchers to sequence hundreds to thousands of microbial DNA samples simultaneously.
+
+$~$
 
 Illumina sequencing is the most widely used technology for 16S rRNA sequencing. It provides short paired-end reads (150–300 bp) and is highly accurate, making it ideal for targeting specific regions of the 16S rRNA gene<sup>17</sup>. The platform is cost-effective and allows for the generation of large amounts of data in a short time.
 
@@ -89,21 +96,34 @@ The 16S rRNA gene sequencing process involves:
 </center>
 <!-- image refernce:https://microbenotes.com/amplicon-sequencing/-->
 
-
+$~$
 
 ## 4. Taxonomy Hierarchy
 
 Taxonomy is the science of classifying organisms based on shared characteristics. In microbiome studies, taxonomy helps us organize microorganisms (like bacteria) into different classification levels, allowing us to group similar organisms and identify specific types of bacteria within a sample.
 
+$~$
+
 The **taxonomy hierarchy** follows a standardized structure that classifies organisms from broad groupings to more specific ones. The main levels of taxonomy used in microbiome studies are:
 
- - **Kingdom:** At the highest level in 16S rRNA studies, we are mainly interested in the Bacteria kingdom, but other domains like Archaea can also be included.
- - **Phylum:** Groups of related classes; for example, the phylum Firmicutes includes many bacteria commonly found in the human gut.
- - **Class:** A division within phyla; for example, the class Clostridia falls under Firmicutes.
- - **Order:** A further subdivision, grouping similar families.
- - **Family:** Groups of closely related genera. For example, Lactobacillaceae is a family within the order Lactobacillales.
- - **Genus:** A group of species with shared characteristics; for example, Lactobacillus is a genus within the family Lactobacillaceae.
- - **Species:** The most specific level, identifying individual types of bacteria. For example, Lactobacillus acidophilus is a species within the genus Lactobacillus.
+$~$
+
+ <b>- Kingdom:</b> At the highest level in 16S rRNA studies, we are mainly interested in the Bacteria kingdom, but other domains like Archaea can also be included.
+
+ <b>- Phylum:</b> Groups of related classes; for example, the phylum Firmicutes includes many bacteria commonly found in the human gut.
+
+ <b>- Class:</b> A division within phyla; for example, the class Clostridia falls under Firmicutes.
+
+ <b>- Order:</b> A further subdivision, grouping similar families.
+
+ <b>- Family:</b> Groups of closely related genera. For example, Lactobacillaceae is a family within the order Lactobacillales.
+
+ <b>- Genus:</b> A group of species with shared characteristics; for example, Lactobacillus is a genus within the family Lactobacillaceae.
+
+ <b>- Species:</b> The most specific level, identifying individual types of bacteria. For example, Lactobacillus acidophilus is a species within the genus Lactobacillus.
+
+
+$~$
 
 In microbiome analysis, each level gives us a different resolution of the microbial community, from broad to specific<sup>19</sup>. The deeper we go in the hierarchy, the more specific the classification becomes, allowing us to identify bacteria at finer levels. Common levels of taxonomic hierarchy used in reaserch include: Phylum, Family, Genus, and Species.
 
@@ -111,21 +131,26 @@ In microbiome analysis, each level gives us a different resolution of the microb
 
 When we perform 16S rRNA sequencing, we can analyze our data at different levels of this taxonomy hierarchy, depending on our research questions and the primers we select.
 
-1. **Higher levels (Phylum, Class, Order):**
+$~$
+
+ 1. Higher levels (Phylum, Class, Order):
 
     - These levels provide a broad overview of the bacterial community and help us see general patterns, like shifts in major bacterial groups due to diet, disease, or environment.
     - Useful for general comparisons, such as comparing the overall diversity between different environments or conditions (e.g., comparing the gut microbiome composition at the phylum level between healthy and diseased individuals).
     - It is often more reliable, as there are fewer ambiguities in classifying bacteria at these broad levels.
 
-2. **Lower levels (Family, Genus, Species):**
+ 2. Lower levels (Family, Genus, Species):
 
     - These levels give us more specific information about the type of bacteria present and are more informative for correlating specific bacteria to health outcomes or identifying particular bacterial strains that may be beneficial or harmful.
     - Useful for targeted studies, such as identifying specific genera or species associated with particular health conditions or environmental changes.
     - Just looking at the species level may overcomplicate the data making differences between populations difficult to detect. 
     - However, 16S sequencing often struggles to resolve species-level distinctions, especially if two species have very similar 16S rRNA sequences. In these cases, we may only be able to confidently identify bacteria down to the genus level.
 
+$~$
+
 In practice, researchers often examine multiple levels to get a comprehensive picture. For example, we might examine broad patterns at the phylum level, then zoom in to the genus level to identify specific bacteria of interest.
 
+$~$
 
 <center>
     <img src="images/taxonomy.png" alt="taxonomy" width="500"/>
@@ -138,12 +163,21 @@ In practice, researchers often examine multiple levels to get a comprehensive pi
 
 Microbial community profiling refers to identifying the composition and structure of microbial populations within a given environment. Through 16S rRNA sequencing, researchers can generate a comprehensive profile of the different bacterial species present in a sample and their relative abundances<sup>1</sup>. This profiling helps to characterize complex microbial ecosystems, such as the human gut, which contains thousands of bacterial species that play crucial roles in health and disease.
 
+$~$
+
 Key steps in microbial community profiling include:
 
-1. **Data preprocessing:** Quality filtering, trimming, and chimera checking of sequences to remove low-quality reads and errors.
-2. **Operational Taxonomic Unit (OTU) or Amplicon Sequence Variant (ASV) assignment:** Grouping sequences based on similarity to form clusters that represent distinct microbial taxa. Traditionally, sequences are grouped into OTUs based on a similarity threshold (e.g., 97%), but newer methods like DADA2 generate ASVs, which provide higher resolution by differentiating sequences down to single-nucleotide differences.
-3. **Taxonomic classification:** Assigning taxonomy to OTUs or ASVs based on comparison with reference databases such as SILVA, Greengenes, or RDP (Ribosomal Database Project). This allows researchers to classify the microbes at various taxonomic levels, including phylum, genus, and species.
-4. **Diversity analysis:** Understanding the diversity within a sample (alpha diversity) and between samples (beta diversity). Alpha diversity measures such as Shannon diversity matrix<sup>20</sup> or Pielou’s evenness index<sup>21</sup> provide insights into species richness and evenness. Beta diversity metrics like Bray-Curtis dissimilarity<sup>22</sup> for evenness and  Jaccard distance<sup>23</sup> for richness are used to compare microbial communities between different samples and often conditions. Another beta diversity metric commonly used is the weighted UniFrac, which considers phylogeny (how closely related organisms are genetically) as a factor when assigning distance<sup>24</sup>.
+$~$
+
+  <b>1. Data preprocessing:</b> Quality filtering, trimming, and chimera checking of sequences to remove low-quality reads and errors.
+
+  <b>2. Operational Taxonomic Unit (OTU) or Amplicon Sequence Variant (ASV) assignment:</b> Grouping sequences based on similarity to form clusters that represent distinct microbial taxa. Traditionally, sequences are grouped into OTUs based on a similarity threshold (e.g., 97%), but newer methods like DADA2 generate ASVs, which provide higher resolution by differentiating sequences down to single-nucleotide differences.
+
+  <b>3. Taxonomic classification:</b> Assigning taxonomy to OTUs or ASVs based on comparison with reference databases such as SILVA, Greengenes, or RDP (Ribosomal Database Project). This allows researchers to classify the microbes at various taxonomic levels, including phylum, genus, and species.
+
+  <b>4. Diversity analysis:</b> Understanding the diversity within a sample (alpha diversity) and between samples (beta diversity). Alpha diversity measures such as Shannon diversity matrix<sup>20</sup> or Pielou’s evenness index<sup>21</sup> provide insights into species richness and evenness. Beta diversity metrics like Bray-Curtis dissimilarity<sup>22</sup> for evenness and  Jaccard distance<sup>23</sup> for richness are used to compare microbial communities between different samples and often conditions. Another beta diversity metric commonly used is the weighted UniFrac, which considers phylogeny (how closely related organisms are genetically) as a factor when assigning distance<sup>24</sup>.
+
+$~$
 
 The outcome of taxonomic classification and microbial community profiling provides a detailed map of the microbial landscape in a sample, enabling researchers to explore relationships between microbial communities and external factors, such as diet, lifestyle, and health outcomes. This analysis is crucial for understanding how changes in microbial populations correlate with various physiological states or environmental conditions.
 
@@ -152,36 +186,51 @@ The outcome of taxonomic classification and microbial community profiling provid
     <img src="images/wolfpack.png" alt="wolfpack" width="200"/>
 </center>
 
+$~$
+
 In this training module, we will be analyzing gut microbiome data from a University of Nevada, Reno study. The **WOLFPACK Study** (Wide Open Local Fecal sample collection comparing Pharmaceutical intake, ACtivity, and dietary intaKe) is designed to explore how diet, health, and many lifestyle aspects impact the gut microbiome of adults living in Northern Nevada. By examining the bacterial composition of fecal samples using 16S rRNA sequencing, and linking these findings to lifestyle and dietary information collected through surveys, this study aims to provide insights into how daily habits and health status influence gut ecology.
 
 The study design involves collecting data through three main sources:
 
- - **Lifestyle Questionnaire:** This is a lengthy survey capturing information on participants' habits, including physical activity, home environment, social connectedness, socioeconomic status, and health history.
- - **[Food Frequency Questionnaire:](https://epi.grants.cancer.gov/diet/usualintakes/ffq.html)** This is a robust survey that assesses a variety of dietary patterns, asking about consumption frequency of many foods.
- - **16S rRNA Sequencing:** Participants also provided a fecal sample, which was processed and sequenced.
+$~$
+
+ <b>- Lifestyle Questionnaire:</b> This is a lengthy survey capturing information on participants' habits, including physical activity, home environment, social connectedness, socioeconomic status, and health history.
+
+ <b>- [Food Frequency Questionnaire:](https://epi.grants.cancer.gov/diet/usualintakes/ffq.html)</b> This is a robust survey that assesses a variety of dietary patterns, asking about consumption frequency of many foods.
+
+ <b>- 16S rRNA Sequencing:</b> Participants also provided a fecal sample, which was processed and sequenced.
 
 
 ### Hypothesis and Research Questions
+
 This study aims to explore the overarching question:
 
-**How do diet and lifestyle influence the composition and diversity of the gut microbiome in Northern Nevadans?**
+
+
+#### How do diet and lifestyle influence the composition and diversity of the gut microbiome in Northern Nevadans?
+
+$~$
 
 Based on this question, we can formulate several hypotheses and sub-questions to guide our analysis. 
 
- 1. **Hypothesis 1:** Dietary patterns significantly impact the diversity and composition of the gut microbiome.
-    - **Question:** How does the frequency of consuming protein correlate with the abundance of bacteria, such as those in the *Firmicutes* phylum which are associated with obesity?
-    - **Question:** Are there specific dietary patterns (e.g., high-protein) associated with distinct gut microbiome profiles?
+$~$
+
+ <b>1. Hypothesis 1:</b> Dietary patterns significantly impact the diversity and composition of the gut microbiome.
+
+  - **Question:** How does the frequency of consuming protein correlate with the abundance of bacteria, such as those in the *Firmicutes* phylum which are associated with obesity?
+  - **Question:** Are there specific dietary patterns (e.g., high-protein) associated with distinct gut microbiome profiles?
       
+$~$
 
-
- 2. **Hypothesis 2:** Gut microbiome composition is shaped by external factors like sex and body mass index (BMI).
-    - **Question:** Is there a correlation between lower BMI and greater microbiome diversity?
-    - **Question:** Are there district differences between sexes in the species of specific bacteria?
+ <b>2. Hypothesis 2:</b> Gut microbiome composition is shaped by external factors like sex and body mass index (BMI).
+ 
+  - **Question:** Is there a correlation between lower BMI and greater microbiome diversity?
+  - **Question:** Are there district differences between sexes in the species of specific bacteria?
 
 Predetermined hypotheses guide the research workflow and create well-defined results. Take some time to think about your own hypothesis and sub-questions to explore.
 
 ### Sample Population
-This study's sample population is **adult residents of Northern Nevada** who are interested in participating. To ensure a broad representation, participation is open to adults of various ages, genders, ethnic backgrounds, and health statuses. The study's open enrollment and anonymous data collection aim to make participation accessible and encourage a wide range of community members to join. By focusing on the Northern Nevada population, the study can provide insights into region-specific factors that may influence gut health, allowing for comparisons with other populations in future research.
+This study's sample population is *adult residents of Northern Nevada* who are interested in participating. To ensure a broad representation, participation is open to adults of various ages, genders, ethnic backgrounds, and health statuses. The study's open enrollment and anonymous data collection aim to make participation accessible and encourage a wide range of community members to join. By focusing on the Northern Nevada population, the study can provide insights into region-specific factors that may influence gut health, allowing for comparisons with other populations in future research.
 
 ## Quiz
 
@@ -194,6 +243,8 @@ includeHTML("questions/Quiz_Submodule1.html")
 
 ## Conclusion
 In this module, we explored using 16S rRNA sequencing analysis as a powerful tool to investigate the diversity and composition of the microbiome. By leveraging this technology, we can explore the intricate relationships between microbial populations and their host’s health, lifestyle, and diet. Sequencing analysis enables comprehensive profiling, providing insights into species richness and community composition.
+
+$~$
 
 Through microbial community profiling and taxonomic classification, we can better understand how microbiota influences biological processes, contributing to fields such as gut health, disease research, and environmental microbiology. This knowledge has far-reaching implications, helping to uncover the role of the microbiome in health and disease, guiding future research, and informing personalized approaches to healthcare and lifestyle interventions.
 

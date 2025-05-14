@@ -57,7 +57,7 @@ The following software are required to run this cloud module.
 
 R Version:
 ```
-R version 4.5.0
+R version 4.4.2
 ```
 
 Required R Packages:
@@ -77,7 +77,7 @@ Required R Packages:
 - rstatix (version 0.7.2)
 - stringr (version 1.5.1)
 
-**Note:** The above listed R packages and the R environment has already been created via a Docker container image `054037098114.dkr.ecr.us-east-1.amazonaws.com/sagemaker/r-notebook` and is deployed via AWS SageMaker when running this cloud module.
+
 
 
 ## **Data**

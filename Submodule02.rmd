@@ -32,7 +32,11 @@ We’ll explain the **FastQ** file formats and use **DADA2** for quality assessm
 
 Our starting point is demultiplexed samples sorted in individual files. Demultiplexing is a crucial step in processing high-throughput sequencing data when multiple samples are sequenced together in a single run (a process called multiplexing). Multiplexing allows researchers to save time and resources by sequencing multiple samples at once, but it introduces the need to sort, or "demultiplex," the data afterward.
 
+$~$
+
 In multiplexing, unique DNA "barcode" sequences are added to each sample before sequencing. During demultiplexing, these barcodes are used to identify which sequences belong to each original sample. The demultiplexing step occurs immediately after the sequencing machine outputs the raw data.
+
+$~$
 
 Demultiplexing software scans the data, recognizes the barcodes, and then separates sequences into individual files for each sample. Once demultiplexed, the data can be analyzed separately for each sample, moving on to further steps such as quality control, trimming, and chimera removal. Demultiplexing is typically performed by the sequencing platform's software and files of individual samples are given to the researcher. 
 
@@ -50,19 +54,31 @@ We will use [DADA2](https://benjjneb.github.io/dada2/tutorial_1_8.html) to load,
 
 DADA2 takes a new approach by attempting to resolve individual sequences down to the level of single-nucleotide differences while correcting for sequencing errors<sup>1</sup>. This approach is called **Amplicon Sequence Variants (ASVs)**, which are highly accurate sequences that represent actual biological diversity in the sample without clustering.
 
+$~$
+
 The DADA2 workflow includes several key steps:
 
- 1. **Inspecting Read Quality Profiles:** Before processing, DADA2 allows us to visualize the quality scores across all sequences. Quality scores provide an estimate of the accuracy of each base call in a sequence. By inspecting these scores, we can identify where the quality drops, which helps determine appropriate trimming parameters.
- 2. **Filtering and Trimming:** Low-quality sequences and ambiguous bases can introduce errors in downstream analysis. In this step, we set quality thresholds to remove reads that don’t meet quality standards. Trimming removes low-quality ends of reads based on quality scores, helping to retain only high-quality sequences for further analysis.
- 3. **Learning Error Rates:** DADA2 builds a model of the specific error rates associated with the sequencing run. Since error patterns vary between sequencing technologies and even between runs, DADA2 analyzes a subset of data to estimate these unique error rates. This error model helps DADA2 accurately correct errors in the sequencing reads.
- 4. **Inferring Sample Composition (ASV Inference):** Using the error model, DADA2 corrects sequencing errors to identify unique, true biological sequences known as Amplicon Sequence Variants (ASVs). ASVs provide finer resolution than Operational Taxonomic Units (OTUs) and often represent exact biological sequences rather than clustered approximations.
- 5. **Merging Paired Reads:** Since we are using paired-end sequencing, this step merges the forward and reverse reads that cover overlapping regions of the same DNA fragment. The merged reads typically provide higher accuracy by combining information from both ends, but reads that fail to overlap are discarded.
- 6. **Constructing a Sequence Table:** After ASVs are identified, DADA2 constructs a sequence table, which is a matrix of samples and their ASV counts. This table serves as the primary data structure for downstream analysis, showing how many times each ASV appears in each sample.
- 7. **Removing Chimeras:** Chimeric sequences are artifacts from PCR amplification, formed by combining segments from different DNA templates. DADA2 identifies these artificial sequences by comparing ASVs and removes them to reduce false positives in microbial identification.
- 8. **Tracking Reads Through the Pipeline:** Throughout the pipeline, DADA2 tracks the number of reads retained at each step. This read-tracking helps to monitor data quality and determine where reads may have been lost, providing a quality control check on each processing stage.
- 9. **Assigning Taxonomy:** After obtaining high-quality ASVs, DADA2 compares them to a reference database (e.g., SILVA, Greengenes) to assign taxonomic labels. This step allows us to identify the microbial taxa present in each sample down to species, genus, or other taxonomic levels, depending on the reference database used.
+ <b>1. Inspecting Read Quality Profiles:</b> Before processing, DADA2 allows us to visualize the quality scores across all sequences. Quality scores provide an estimate of the accuracy of each base call in a sequence. By inspecting these scores, we can identify where the quality drops, which helps determine appropriate trimming parameters.
+ 
+ <b>2. Filtering and Trimming:</b> Low-quality sequences and ambiguous bases can introduce errors in downstream analysis. In this step, we set quality thresholds to remove reads that don’t meet quality standards. Trimming removes low-quality ends of reads based on quality scores, helping to retain only high-quality sequences for further analysis.
+ 
+ <b>3. Learning Error Rates:</b> DADA2 builds a model of the specific error rates associated with the sequencing run. Since error patterns vary between sequencing technologies and even between runs, DADA2 analyzes a subset of data to estimate these unique error rates. This error model helps DADA2 accurately correct errors in the sequencing reads.
+ 
+ <b>4. Inferring Sample Composition (ASV Inference):</b> Using the error model, DADA2 corrects sequencing errors to identify unique, true biological sequences known as Amplicon Sequence Variants (ASVs). ASVs provide finer resolution than Operational Taxonomic Units (OTUs) and often represent exact biological sequences rather than clustered approximations.
+ 
+ <b>5. Merging Paired Reads:</b> Since we are using paired-end sequencing, this step merges the forward and reverse reads that cover overlapping regions of the same DNA fragment. The merged reads typically provide higher accuracy by combining information from both ends, but reads that fail to overlap are discarded.
+ 
+ <b>6. Constructing a Sequence Table:</b> After ASVs are identified, DADA2 constructs a sequence table, which is a matrix of samples and their ASV counts. This table serves as the primary data structure for downstream analysis, showing how many times each ASV appears in each sample.
+ 
+ <b>7. Removing Chimeras:</b> Chimeric sequences are artifacts from PCR amplification, formed by combining segments from different DNA templates. DADA2 identifies these artificial sequences by comparing ASVs and removes them to reduce false positives in microbial identification.
+ 
+ <b>8. Tracking Reads Through the Pipeline:</b> Throughout the pipeline, DADA2 tracks the number of reads retained at each step. This read-tracking helps to monitor data quality and determine where reads may have been lost, providing a quality control check on each processing stage.
+ 
+ <b>9. Assigning Taxonomy:</b> After obtaining high-quality ASVs, DADA2 compares them to a reference database (e.g., SILVA, Greengenes) to assign taxonomic labels. This step allows us to identify the microbial taxa present in each sample down to species, genus, or other taxonomic levels, depending on the reference database used.
 
 This process gives us highly accurate and reproducible results. We will start by installing and loading DADA2 and necessary packages.
+
+$~$
 
 
 ```{r, eval=FALSE}
@@ -94,26 +110,38 @@ library(patchwork)
 
 Our sequencing files are stored in FASTQ format, a common file type for sequencing data. Each entry (or sequence) in a FASTQ file contains four lines: the sequence identifier, the DNA sequence, a separator, and a quality score line. This format is compact and efficient, making it essential for storing large-scale sequencing data.
 
+$~$
+
 <center>
     <img src="images/fastq.png" alt="fastq" width="900"/>
 </center>
 
+$~$
+
 FASTQ files follow the same format with each sequence entry:
- 1. **Sequence Identifier:** Starts with an "@" symbol, followed by a unique identifier for the sequence. It may also contain additional details, such as the instrument used and the read number.
- 2. **DNA Sequence:** The actual sequence of DNA bases (A, T, C, G) observed in the sample. The length of this line is equal to the number of bases sequenced.
- 3. **Separator Line:** A "+" symbol acts as a separator between the sequence and its quality scores.
- 4. **Quality Scores:** A string of characters representing the quality of each base in the sequence. Each character encodes a [Phred quality score](https://en.wikipedia.org/wiki/Phred_quality_score), where higher scores indicate more confidence in the accuracy of the base call. The quality string is the same length as the sequence line.
+
+ <b>1. Sequence Identifier:</b> Starts with an "@" symbol, followed by a unique identifier for the sequence. It may also contain additional details, such as the instrument used and the read number.
+ 
+ <b>2. DNA Sequence:</b> The actual sequence of DNA bases (A, T, C, G) observed in the sample. The length of this line is equal to the number of bases sequenced.
+ 
+ <b>3. Separator Line:</b> A "+" symbol acts as a separator between the sequence and its quality scores.
+ 
+ <b>4. Quality Scores:</b> A string of characters representing the quality of each base in the sequence. Each character encodes a [Phred quality score](https://en.wikipedia.org/wiki/Phred_quality_score), where higher scores indicate more confidence in the accuracy of the base call. The quality string is the same length as the sequence line.
+ 
+$~$
 
 Now we will download our data and import it with DADA2.
 
-```{r}
-# Download data
+$~$
 
+```{r, eval = FALSE}
+# Download data
+system("wget -r -np -R 'index.html*' --no-check-certificate --cut-dirs=2 -nH https://biox.unr.edu/ftp/16S_Training_Module/")
 ```
 
 ```{r}
 # Check files
-path <- "datach/fastquz/newFastq"
+path <- "fastqs"
 list.files(path)
 ```
 
@@ -132,6 +160,8 @@ sample.names <- sapply(strsplit(basename(fnFs), "_"), `[`, 1)
 
 Check to make sure our sample names are correct.
 
+$~$
+
 ```{r}
 # Display sample names and number of samples
 cat("Sample names:\n")
@@ -139,7 +169,9 @@ cat(sample.names, sep = "\n")
 cat("There are", length(sample.names), "samples")
 ```
 
-An .rds file saves R objects that can be quickly loaded back into R using `readRDS()`. While .rds files are optimized for R and can't be viewed directly outside of R, they are efficient for storing individual R objects and preserving their exact structure. This format is especially useful when you need to save and reload between sessions.
+An `.rds` file saves R objects that can be quickly loaded back into R using `readRDS()`. While `.rds` files are optimized for R and can't be viewed directly outside of R, they are efficient for storing individual R objects and preserving their exact structure. This format is especially useful when you need to save and reload between sessions.
+
+$~$
 
 ```{r}
 # Save our data
@@ -151,7 +183,11 @@ saveRDS(sample.names, file = 'sampleNames.rds')
 ### Read Quality Score
 We will first look at the quality of the individual bases in the reads by pulling the Phred score for each read in a sample. The heatmap produced shows the frequency of each quality score at each base over all the reads for a given sample. The green line represents the median with orange lines representing quartiles. 
 
+$~$
+
 *Note:* Some of these steps take several minutes to run. 
+
+$~$
 
 ```{r}
 # View quality profiles of forward reads for the first 2 samples
@@ -159,6 +195,8 @@ plotQualityProfile(fnFs[1:2])
 ```
 
 *This step will take several minutes to run.*
+
+$~$
 
 ```{r}
 # We can create a plot for all of the samples and
@@ -182,6 +220,8 @@ We can manually visualize our quality profiles for all of the samples (plotQuali
 2. **Signal interference**: Accumulation of incomplete washes, phasing/pre-phasing, and fluorescent noise
 3. **Base calling uncertainty**: Higher error rates in later cycles make base calling less confident
 
+$~$
+
 ```{r}
 # View quality profiles of reverse reads for the first 2 samples
 plotQualityProfile(fnRs[1:2])
@@ -189,17 +229,20 @@ plotQualityProfile(fnRs[1:2])
 
 Reverse reads typically show lower quality scores than forward reads. This is normal in paired-end sequencing data for several reasons:
 
-1. **Sequential Nature**: Reverse reads are generated after forward ones, when:
-   - Reagents are more depleted
-   - More sequencing cycles have occurred
-   - More errors have accumulated
+  <b>1. Sequential Nature:</b> Reverse reads are generated after forward ones, when:
+  
+  - Reagents are more depleted
+  - More sequencing cycles have occurred
+  - More errors have accumulated
 
-2. **DADA2's Handling**: DADA2 is designed to work with this quality variation because:
+  <b>2. DADA2's Handling:</b> DADA2 is designed to work with this quality variation because:
+  
    - It incorporates quality scores into its error models
    - It can differentiate between sequencing errors and real biological variation
    - Each base is weighted by its quality score in the algorithm
 
-3. **Trimming Strategy**: While DADA2 can handle lower quality scores, we still trim the poorest quality bases because:
+  <b>3. Trimming Strategy:</b> While DADA2 can handle lower quality scores, we still trim the poorest quality bases because:
+  
    - It improves the algorithm's performance
    - Reduces computational time
    - Increases confidence in the final results
@@ -241,9 +284,9 @@ This is okay for our analysis because quality is more important than quantity, r
 High-quality reads typically have consistent Phred scores across their length, with minimal drop-off at the ends.
 
 
-![Forward Reads Quality Profile](images/plotFs.png)
+![](images/plotFs.png)
 
-![Reverse Reads Quality Profile](images/plotRs.png)
+![](images/plotRs.png)
 
 
 ### Filter and Trim
@@ -261,29 +304,35 @@ DADA2's `filterAndTrim()` function processes raw sequencing reads to ensure high
 
 #### Key Parameters for V4 16S rRNA Data:
 
-**`truncLen=c(200,130)`**: 
-- For V4 region (~250 bp), we expect ~200-250 bp reads
-- Forward reads (R1) at 200 bp because quality usually stays good
-- Reverse reads (R2) truncated more aggressively at 130 bp due to quality drop
-- These numbers are chosen by examining quality plots for your specific run
-- Must ensure enough overlap between F and R reads (~20 bp minimum)
+`truncLen=c(200,130)`: Truncating read length
 
-**Quality Control Parameters:**
-- `maxEE=c(2,5)`: Maximum "expected errors" allowed
-  - More stringent for forward reads (2 errors)
-  - More lenient for reverse reads (5 errors)
-  - Higher numbers = more lenient filtering
+ - For V4 region (~250 bp), we expect ~200-250 bp reads
+ - Forward reads (R1) at 200 bp because quality usually stays good
+ - Reverse reads (R2) truncated more aggressively at 130 bp due to quality drop
+ - These numbers are chosen by examining quality plots for your specific run
+ - Must ensure enough overlap between F and R reads (~20 bp minimum)
 
-- `truncQ=2`: Cuts reads when quality score drops to Q2
-  - Removes poor quality ends dynamically
-  - Q2 is very low quality, ensures removal of worst bases
+##### Quality Control Parameters:
 
-**Technical Parameters:**
+`maxEE=c(2,5)`: Maximum "expected errors" allowed
+
+ - More stringent for forward reads (2 errors)
+ - More lenient for reverse reads (5 errors)
+ - Higher numbers = more lenient filtering
+
+`truncQ=2`: Cuts reads when quality score drops to Q2
+
+ - Removes poor quality ends dynamically
+ - Q2 is very low quality, ensures removal of worst bases
+
+##### Technical Parameters:
+
 - `maxN=0`: Removes reads with any ambiguous bases (N)
 - `trimLeft=c(0,0)`: No trimming from read starts
 - `rm.phix=TRUE`: Removes PhiX spike-in control DNA (if you are using those)
 
 #### How to Choose Parameters:
+
 1. Check quality plots first
 2. Look for where quality drops significantly
 3. Ensure enough overlap remains for merging
@@ -328,9 +377,15 @@ While quality scores tell us about the confidence in each base call, DADA2 goes 
 
 Think of it like this: Quality scores are like spell-checking individual words, while DADA2's error model is like learning someone's specific typing patterns to better catch their common mistakes.
 
+$~$
+
 *Note: This is why DADA2 is more sophisticated than simple quality filtering - it understands the unique "personality" of your sequencing run's errors.*
 
+$~$
+
 *These steps will take several minutes to run.*
+
+$~$
 
 ```{r}
 # Error model for forward reads
@@ -350,6 +405,7 @@ saveRDS(errF,file="errF.rds")
 saveRDS(errR,file="errR.rds")
 ```
 
+$~$
 
 <details>
 <summary>If you are coming back to this module, reload your saved data here.</summary>
@@ -363,8 +419,11 @@ errR <- readRDS("errR.rds")
 ```
 </details>
 
+$~$
 
 We can now plot the estimated error rates. These plots displays the observed error rates across various quality scores for each base position in the reads (A, C, G, T). It allows us to compare the empirical error rates (from the actual data) to the estimated error rates (based on the model DADA2 has learned represented in a black line).
+
+$~$
 
 ```{r}
 # Plot forward reads estimated error rates
@@ -384,7 +443,11 @@ plotErrors(errR, nominalQ = TRUE) +
 
 We will now use DADA2's learned error rates and identify amplicon sequence variants (ASV) while removing likely errors. 
 
+$~$
+
 *This step will take several minutes to run.*
+
+$~$
 
 ```{r}
 # Creating DADA object
@@ -403,9 +466,13 @@ dadaFs[[1]]
 
 Our data is paired-end sequencing, DNA fragments are sequenced from both ends - the forward read (5' end) and reverse read (3' end) of the template strand. This approach provides higher quality data than single-end sequencing because the overlapping regions between reads allow for error validation and longer final sequences. DADA2 merges these paired reads by identifying matching overlap regions and combining them into single, high-confidence sequences, discarding any pairs that don't align properly.
 
+$~$
+
 The `mergePairs()` funcation requires the dada objects we created as well as the filtered reads, because not all of that information is stored in the dada objects we created in the last step. 
 
-```{r}
+$~$
+
+```{r, message=FALSE}
 # Combine the forward and reverse reads into one
 mergers <- mergePairs(dadaFs, filtFs, dadaRs, filtRs, verbose=TRUE)
 # Inspect the merger data.frame from the first sample
@@ -416,6 +483,8 @@ head(mergers[[1]])
 
 We can now constuct the ASV table. This table is a matrix of samples (rows) and each ASV identified (columns). 
 
+$~$
+
 ```{r}
 # View the dimensions of our merged samples 
 seqtab  <- makeSequenceTable(mergers)
@@ -423,6 +492,8 @@ dim(seqtab)
 ```
 
 Our table contains 35 samples and 5902 ASVs. Now let's view the lengths of the variants. 
+
+$~$
 
 ```{r}
 # Inspect the distribution of sequence lengths
@@ -434,12 +505,16 @@ table(nchar(getSequences(seqtab))) # the length should be around 250
 
 DADA2's error model corrects for substitutions and indels, but not Chimeras (two different DNA strands megred together). Chimeras are easier to identify in ASVs, as opposed to OTUs, because of their exact sequences.
 
+$~$
+
 ```{r}
 # Remove chimeras
 seqtab.nochim <- removeBimeraDenovo(seqtab, method="consensus", multithread=TRUE, verbose=TRUE)
 ```
 
-*Note: DADA2 uses the term "bimera" specifically because it refers to sequences formed from exactly *two* parent sequences, "bi-" meaning two. While "chimera" is the broader term that can include sequences formed from multiple parent sequences (three or more), most artificial chimeric sequences in amplicon sequencing are actually bimeras. DADA2's algorithm specifically looks for these two-parent artifacts as they are the most common type of chimeric sequence formed during PCR amplification.*
+*Note: DADA2 uses the term "bimera" specifically because it refers to sequences formed from exactly two parent sequences, "bi-" meaning two. While "chimera" is the broader term that can include sequences formed from multiple parent sequences (three or more), most artificial chimeric sequences in amplicon sequencing are actually bimeras. DADA2's algorithm specifically looks for these two-parent artifacts as they are the most common type of chimeric sequence formed during PCR amplification.*
+
+$~$
 
 ```{r}
 # New sequence table
@@ -451,6 +526,8 @@ sum(seqtab.nochim)/sum(seqtab)
 
 Here we can see that Chimeras accounted for ~10% of the merged sequence reads.
 
+$~$
+
 ```{r}
 # Save our data
 saveRDS(seqtab.nochim, "seqtabnochim.rds")
@@ -459,6 +536,8 @@ saveRDS(seqtab.nochim, "seqtabnochim.rds")
 ### Track reads through the pipeline
 
 Let's construct a summary table of our steps to see how many reads were removed in the cleaning process. 
+
+$~$
 
 ```{r}
 getN <- function(x) sum(getUniques(x))
@@ -476,12 +555,22 @@ We retained ~25-30% of our original reads! This is likely due to the poor qualit
 ### Read in taxonomy
 
 The last step in this model is to read in a taxonomy database. We must first select a database. Two of the most commonly used are Greengenes and SILVA, each with its strengths and weaknesses.
- + **Greengenes<sup>2</sup>** is a chimera-checked 16S rRNA gene database. It provides chimera screening, standard alignment, and taxonomic classification using multiple published taxonomies. Its most recent update was on July 03, 2017.
- + **[SILVA](https://www.arb-silva.de/documentation/release-138.1/)<sup>3-4</sup>** is a high quality ribosomal RNA database. It is a comprehensive and quality-controlled database for up-to-date ribosomal RNA sequences. Additionally, SILVA also provides many other tools like alignment, phylogenetic tree classification, and probe/primer matching. It was last updated on August 27, 2020.
+
+$~$
+ 
+ + Greengenes<sup>2</sup> is a chimera-checked 16S rRNA gene database. It provides chimera screening, standard alignment, and taxonomic classification using multiple published taxonomies. Its most recent update was on July 03, 2017.
+
+ + [SILVA](https://www.arb-silva.de/documentation/release-138.1/)<sup>3-4</sup> is a high quality ribosomal RNA database. It is a comprehensive and quality-controlled database for up-to-date ribosomal RNA sequences. Additionally, SILVA also provides many other tools like alignment, phylogenetic tree classification, and probe/primer matching. It was last updated on August 27, 2020.
+ 
+$~$
 
 Since our data has chimeras removed and we want the most up-to-date analysis, we will use SILVA.
 
+$~$
+
 *This step will take several minutes to run.*
+
+$~$
 
 ```{r}
 # Read in Taxonomy
@@ -500,10 +589,15 @@ head(taxa.print)
 
 Microbime studies often include mock and/or blank controls to help identify and mitigate possible contamination, ensuring the accuracy and reliability of the data.
 
+$~$
+
  + **Mock Controls:** These are samples with a known microbial community composition, often with a defined mix of microbial strains in known proportions. By including mock controls, researchers can verify the performance of the sequencing pipeline and taxonomic assignment tools. If the analysis accurately identifies the species and proportions in the mock community, it provides confidence that the methods are performing correctly. Any discrepancies may indicate biases in the sequencing or analysis process that should be addressed.
  + **Blank Controls:** These are negative controls that contain no added DNA. Blank controls help detect potential contamination from reagents, the lab environment, or equipment. Since microbial DNA is often present at very low concentrations, contamination can skew results, especially for low-biomass samples. If microbial sequences appear in blank controls, it could indicate contamination, and researchers can account for this by removing these sequences from experimental samples.
 
 Although our study does not have these controls, incorporating both mock and blank controls in the study design can boost quality control. It helps distinguish true biological signals from artifacts introduced during sample processing or sequencing. 
+
+
+$~$
 
 ```{r}
 # Save our data
@@ -513,7 +607,7 @@ saveRDS(taxa, "taxa.rds")
 
 ## Quiz
 
-```{r}
+```{r, warning=FALSE}
 # Run the following command to take the quiz
 library(htmltools)
 includeHTML("questions/Quiz_Submodule2.html")
