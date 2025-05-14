@@ -1,4 +1,4 @@
-FROM rocker/r-ver:4.4.2
+FROM rocker/rstudio:4.4.2
 
 # Set the working directory
 WORKDIR /usr/local/src/microbiome-analysis
@@ -19,6 +19,3 @@ RUN Rscript install_packages.R
 
 # Clean up
 RUN rm install_packages.R
-
-# Set the default command
-CMD ["R"]
