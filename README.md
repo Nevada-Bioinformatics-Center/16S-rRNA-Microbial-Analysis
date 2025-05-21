@@ -77,7 +77,10 @@ Required R Packages:
 - rstatix (version 0.7.2)
 - stringr (version 1.5.1)
 
-
+*Note:* A Docker image with these packages has already been created. To use the image run:
+```
+docker pull cw2048/16s-r:latest
+```
 
 
 ## **Data**

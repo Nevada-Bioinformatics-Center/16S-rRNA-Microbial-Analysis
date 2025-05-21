@@ -97,6 +97,14 @@ FASTQ files follow the same format with each sequence entry:
 Now we will download our data and import it with DADA2.
 
 
+*Note:* If you are using a Mac you may need to install `wget` first. 
+``` r
+## Only run this code if you are using a Mac that doesn't already have wget installed 
+system("brew install wget")
+```
+
+
+
 ``` r
 # Download data
 system("wget -r -np -R 'index.html*' --no-check-certificate --cut-dirs=2 -nH https://biox.unr.edu/ftp/16S_Training_Module/")
