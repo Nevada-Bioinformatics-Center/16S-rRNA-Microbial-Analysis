@@ -7,3 +7,5 @@ datach/
 *.rds
 tax/
 fastqs/
+metadata/FFQ_Data.csv
+*.RData
