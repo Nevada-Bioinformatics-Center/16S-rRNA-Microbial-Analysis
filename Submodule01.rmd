@@ -194,11 +194,11 @@ The study design involves collecting data through three main sources:
 
 $~$
 
- <b>- Lifestyle Questionnaire:</b> This is a lengthy survey capturing information on participants' habits, including physical activity, home environment, social connectedness, socioeconomic status, and health history.
+ - <a href="survey/Lifestyle_Survey.pdf" target="_blank">Lifestyle Questionnaire:</a> This is a lengthy survey capturing information on participants' habits, including physical activity, home environment, social connectedness, socioeconomic status, and health history.
 
- <b>- [Food Frequency Questionnaire:](https://epi.grants.cancer.gov/diet/usualintakes/ffq.html)</b> This is a robust survey that assesses a variety of dietary patterns, asking about consumption frequency of many foods.
+ - <a href="https://epi.grants.cancer.gov/diet/usualintakes/ffq.html" target="_blank">Food Frequency Questionnaire</a> This is a robust survey that assesses a variety of dietary patterns, asking about consumption frequency of many foods.
 
- <b>- 16S rRNA Sequencing:</b> Participants also provided a fecal sample, which was processed and sequenced.
+ - <b>16S rRNA Sequencing:</b> Participants also provided a fecal sample, which was processed and sequenced.
 
 
 ### Hypothesis and Research Questions

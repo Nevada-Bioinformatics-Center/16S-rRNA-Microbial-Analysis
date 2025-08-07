@@ -144,7 +144,7 @@ In this training module, we will be analyzing gut microbiome data from a Univers
 
 The study design involves collecting data through three main sources:
 
- - **Lifestyle Questionnaire:** This is a lengthy survey capturing information on participants' habits, including physical activity, home environment, social connectedness, socioeconomic status, and health history.
+ - **[Lifestyle Questionnaire:](../survey/Lifestyle_Survey.pdf)** This is a lengthy survey capturing information on participants' habits, including physical activity, home environment, social connectedness, socioeconomic status, and health history.
  - **[Food Frequency Questionnaire:](https://epi.grants.cancer.gov/diet/usualintakes/ffq.html)** This is a robust survey that assesses a variety of dietary patterns, asking about consumption frequency of many foods.
  - **16S rRNA Sequencing:** Participants also provided a fecal sample, which was processed and sequenced.
 
